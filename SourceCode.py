@@ -69,7 +69,7 @@ class FileManagerApp:
         
     def create_function_panel(self):
         panel = ttk.Frame(self.paned_window)
-        notebook = ttk.Notebook(panel)
+        self.notebook = ttk.Notebook(panel)  # 关键修改：保存为实例变量
         
         # Configure tabs
         tabs = {
@@ -78,11 +78,11 @@ class FileManagerApp:
         }
         
         for text, creator in tabs.items():
-            frame = ttk.Frame(notebook)
+            frame = ttk.Frame(self.notebook)
             creator(frame)
-            notebook.add(frame, text=text)
+            self.notebook.add(frame, text=text)
         
-        notebook.pack(expand=True, fill=tk.BOTH)
+        self.notebook.pack(expand=True, fill=tk.BOTH)
         return panel
                 
     def create_preview_tab(self, parent):
@@ -116,8 +116,8 @@ class FileManagerApp:
         
     def setup_bindings(self):
         self.tree.bind("<<TreeviewSelect>>", self.show_preview)
-        
-    # Core functionality implementations
+    
+    # 核心功能实现
     def open_folder(self):
         path = filedialog.askdirectory()
         if not path:
@@ -156,7 +156,7 @@ class FileManagerApp:
                     dest = os.path.join(dest_dir, filename)
                     shutil.move(src, dest)
                     
-                    # Record operation
+                    # 记录操作
                     self.log_operation("MOVE", src, dest)
                     organized_files.append({
                         "type": "MOVE",
@@ -165,7 +165,7 @@ class FileManagerApp:
                         "timestamp": datetime.datetime.now()
                     })
             
-            # Add batch to operation stack
+            # 添加到操作栈
             if organized_files:
                 self.operation_stack.extend(organized_files)
                 messagebox.showinfo("Complete", f"Organized {len(organized_files)} files")
@@ -182,7 +182,7 @@ class FileManagerApp:
         success_count = 0
         error_messages = []
         
-        # Reverse chronological order
+        # 按时间倒序处理
         for op in reversed(move_operations):
             try:
                 shutil.move(op["from"], op["to"])
@@ -191,19 +191,19 @@ class FileManagerApp:
             except Exception as e:
                 error_messages.append(f"{op['from']} -> {op['to']}: {str(e)}")
         
-        # Update operation stack
+        # 更新操作栈
         self.operation_stack = [op for op in self.operation_stack if op not in move_operations]
         
-        # Refresh UI
+        # 刷新界面
         self.load_directory_tree(self.current_dir)
         
-        # Show results
+        # 显示结果
         result = f"Successfully undone {success_count} moves"
         if error_messages:
             result += f"\n\nFailed operations:\n" + "\n".join(error_messages)
         messagebox.showinfo("Undo Complete", result)
         
-    # Additional features
+    # 附加功能
     def find_duplicates(self):
         path = filedialog.askdirectory()
         if not path:
@@ -232,30 +232,6 @@ class FileManagerApp:
             messagebox.showinfo("Duplicates Found", f"Found {len(duplicates)} duplicates:\n\n{msg}")
         else:
             messagebox.showinfo("Result", "No duplicate files found")
-            
-    def search_files(self):
-        keyword = self.search_entry.get().strip()
-        if not keyword:
-            messagebox.showwarning("Warning", "Please enter a search term")
-            return
-            
-        path = filedialog.askdirectory()
-        if not path:
-            return
-            
-        self.search_results.delete(*self.search_results.get_children())
-        
-        matches = []
-        for root, _, files in os.walk(path):
-            for file in files:
-                if keyword.lower() in file.lower():
-                    full_path = os.path.join(root, file)
-                    size = os.path.getsize(full_path)
-                    matches.append((file, full_path, size))
-        
-        for file, path, size in matches:
-            self.search_results.insert("", "end", text=file, 
-                                      values=(path, self.format_size(size)))
             
     def show_preview(self, event=None):
         selected = self.tree.selection()
@@ -295,7 +271,7 @@ class FileManagerApp:
         
     def show_history(self):
         self.load_history()
-        self.notebook.select(self.tab_history)
+        self.notebook.select(1)  # 切换到第二个标签页（索引从0开始）
         
     def load_history(self):
         self.history_tree.delete(*self.history_tree.get_children())
@@ -308,7 +284,7 @@ class FileManagerApp:
     def load_history_file(self, filename):
         filepath = os.path.join(self.history_dir, filename)
         try:
-            with open(filepath, "r") as f:
+            with open(filepath, "r", encoding='utf-8') as f:  # 关键修改：指定编码
                 for line in f:
                     entry = json.loads(line)
                     timestamp = datetime.datetime.fromisoformat(
