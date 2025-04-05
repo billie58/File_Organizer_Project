@@ -5,7 +5,7 @@
 
 ## Graphical Abstract
 
-![alt text](image-2.png)  
+![Image](https://github.com/user-attachments/assets/24d32416-d1a0-4904-9258-ec238c6bc271)
 *This image provides a visual representation of the project, showcasing key components and functionalities.*
 
 ## Purpose of the Software
