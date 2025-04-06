@@ -31,36 +31,58 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 ## Software Development Process
 - **Type of Development Process Applied:** Agile
 - **Reason for Choosing Agile:** Agile allows for iterative development and continuous improvement, which is essential for our project given the dynamic nature of the target market and the need for rapid adaptation to user feedback.
-- **Possible Usage (Target Market):** Our software is designed for [specific industry/field], targeting [target audience], such as [example users]. It aims to [describe the primary use case], providing [list key benefits].
+# Possible Usage
 
-## Perfect For:
+Our software is designed for **file management and organization**, targeting **students, photographers, and everyday users**. It aims to simplify the process of organizing digital files, providing efficient auto-sorting, powerful duplicate detection, and instant previews.
 
-- Students organizing projects
-- Photographers managing images
-- Anyone with a messy downloads folder
+
 
 
 # **Software Development Plan**
 
 ## Development Process
-- **Iterative Development:** We follow an Agile methodology with bi-weekly sprints.
-- **Continuous Integration:** Code is integrated daily, with automated testing to ensure stability.
-- **User Feedback Loop:** Regular user testing and feedback sessions are conducted to refine features and improve user experience.
 
+We adopted Scrum—an Agile project management and product development framework—to break down the project into smaller, manageable tasks and facilitate iterative progress. This approach enabled the team to deliver a high-quality application more efficiently by focusing on a limited set of features at any given time. Moreover, Agile (Scrum) allows us to prioritize the needs of our stakeholders (students, lecturers, and administrators) from the very beginning of the software development life cycle.
+
+### Requirement Analysis
+
+- **Product Owner** gathers and understands the key requirements from students, lecturers, and administrators.
+- Create a list of features required and add them to the **product backlog**.
+
+### Sprint Planning
+
+- Select items from the **product backlog** (work for 3 - 4 weeks) for the upcoming sprint.
+
+### Daily Standups
+
+- Daily standup meetings to update each other on progress and identify any issues.
+
+### Sprint Execution
+
+- Develop the items selected during sprint planning.
+
+### Sprint Review and Retrospective
+
+- Demonstrate the completed work to students, lecturers, and administrators.
+- Gather feedback and discuss with the team for improvements needed.
+
+### Repeat
+
+- Move on to the next sprint with improved processes.
 
 
 ## Members
 - **Frank**  
   - *Role:* Project Manager  
-  - *Responsibilities:* Oversee project timeline, coordinate team efforts, manage client communications.  
+  - *Responsibilities:* Write the README file, plan the whole software development process, develop the software and test the software. 
   - *Portion:* 34%
 - **David**  
   - *Role:* Developer  
-  - *Responsibilities:* Architectural design, core feature development, code reviews.  
+  - *Responsibilities:* Help develop the software and test the software.
   - *Portion:* 33%
 - **Max**  
   - *Role:* Developer  
-  - *Responsibilities:* User interface design, user experience testing, visual assets.  
+  - *Responsibilities:* Help develop the software and test the software.  
   - *Portion:* 33%
 
 
@@ -75,15 +97,65 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 
 ## Algorithm
 
-xxxxxxxxxxxxxxxxxxx
+### Requirement Gathering
 
+- Gathering, analyzing, and documenting the requirements of students, lecturers, and administrators.
+- Forming interviews and surveys to collect information.
+
+### Design
+
+- System and design elements are created based on the requirements.
+- Includes database schema designs and data flow diagrams.
+- Covers basic structure and modules such as:
+  - User authentication and authorization
+  - Course and assignment management
+- Plan out the product backlog for the upcoming Sprint (Sprint Planning).
+
+### Implementation
+
+- Actual coding and development of the application (Sprint Execution).
+- Using version control systems like Git to collaborate and track changes to the codebase.
+
+### Test / Validation
+
+- Fix issues and bugs.
+- Mainly test the newly added functionality for this Sprint.
+
+### Deployment
+
+- Deploy the code and update the application to the production environment.
+- Review the improvements needed for the Sprint process and apply them (Sprint Review and Retrospective).
+- Start another round of Sprint.
+
+### Maintenance
+
+- After each deployment, closely monitor bugs and errors.
+- Address user feedback.
 
 
 
 ## Current Status
-- **Core Features Implemented:** [List key features currently available]
-- **Performance Metrics:** [Provide current performance metrics, such as speed, accuracy, etc.]
-- **Known Issues:** [List any known bugs or limitations]
+
+### Core Features Implemented
+
+- Basic file organization (by file type)
+- Duplicate file detection (content-based comparison)
+- Full operation history tracking (undo all actions)
+- File previews (images and text files)
+
+### Current Performance
+
+- Folder loading speed: ~500 files/second
+- File moving speed: ~200 operations/second (SSD test)
+- Memory usage: 150MB base + 50MB per 10,000 files
+- Image preview generation: 0-5 seconds
+
+### Known Issues
+
+- Limited preview formats (no PDF/Office docs)
+- UI freezes during large file processing
+- Manual refresh required after external changes when checking history
+- Special character path handling issues
 
 
 
