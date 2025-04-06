@@ -1,28 +1,55 @@
-# File_Organizer_Project
+# File_Organizer
+**Organize Files the Stress-Free Way**
+
+File_Organizer works like a digital assistant for your files. It can combine automatic organization with human-friendly controls. It also can track every action, letting you experiment freely knowing you can always rewind mistakes. Regular updates keep the tool focus on real-world needs rather than unnecessary complexity.
+### 📂 Smart Auto-Sorting and tools
+
+- Automatically moves files to folders by type (documents, images, etc.).
+- Finds duplicate files by content (not just names).
+- Shows file previews for quick checking (text/images).
+- Tracks every change in an activity log.
+
+### ⏮️ Safety First
+
+- Undo accidental file moves.
+- All operations can be reversed.
+- Never lose files by mistake.
 
 
-# Software Development Documentation
 
-## Graphical Abstract
+# **Graphical Abstract**
 
-![alt text](image-2.png)  
-*This image provides a visual representation of the project, showcasing key components and functionalities.*
+![Image](https://github.com/user-attachments/assets/24d32416-d1a0-4904-9258-ec238c6bc271)  
+*This screenshot provides a visual representation of File_Organizer after opening a folder*
 
-## Purpose of the Software
+*(include files in the test_folder and fuctionalities)*
 
-### Software Development Process
+
+
+# **Purpose of the Software**
+
+## Software Development Process
 - **Type of Development Process Applied:** Agile
 - **Reason for Choosing Agile:** Agile allows for iterative development and continuous improvement, which is essential for our project given the dynamic nature of the target market and the need for rapid adaptation to user feedback.
 - **Possible Usage (Target Market):** Our software is designed for [specific industry/field], targeting [target audience], such as [example users]. It aims to [describe the primary use case], providing [list key benefits].
 
-## Software Development Plan
+## Perfect For:
 
-### Development Process
+- Students organizing projects
+- Photographers managing images
+- Anyone with a messy downloads folder
+
+
+# **Software Development Plan**
+
+## Development Process
 - **Iterative Development:** We follow an Agile methodology with bi-weekly sprints.
 - **Continuous Integration:** Code is integrated daily, with automated testing to ensure stability.
 - **User Feedback Loop:** Regular user testing and feedback sessions are conducted to refine features and improve user experience.
 
-### Members
+
+
+## Members
 - **Frank**  
   - *Role:* Project Manager  
   - *Responsibilities:* Oversee project timeline, coordinate team efforts, manage client communications.  
@@ -36,43 +63,104 @@
   - *Responsibilities:* User interface design, user experience testing, visual assets.  
   - *Portion:* 33%
 
-### Schedule
+
+## Schedule
 - **Sprint 1 (Week 1-2):** Initial setup, requirements gathering, basic framework development.
 - **Sprint 2 (Week 3-4):** Core feature development, initial UI/UX design.
 - **Sprint 3 (Week 5-6):** Integration testing, user feedback collection, feature refinement.
 - **Sprint 4 (Week 7-8):** Final testing, deployment preparation, documentation.
 - **Post-Deployment:** Continuous support, updates, and feature enhancements based on user feedback.
 
-### Algorithm
+
+
+## Algorithm
 
 xxxxxxxxxxxxxxxxxxx
 
-### Current Status
+
+
+
+## Current Status
 - **Core Features Implemented:** [List key features currently available]
 - **Performance Metrics:** [Provide current performance metrics, such as speed, accuracy, etc.]
 - **Known Issues:** [List any known bugs or limitations]
 
-### Future Plan
-- **Upcoming Features:** [List planned features for the next release]
-- **Performance Improvements:** [Describe planned optimizations]
-- **Long-term Goals:** [Outline broader future development goals]
 
 
-## Additional Components
+## Future Plan
 
-### Domo (YouTube URL)
+### **--next 3-6 months**
+### Core Feature Enhancements
+
+- **Custom File Organization Rules**
+  - Build on existing `organize_files()` with user-defined extension/date-based sorting
+
+- **Multi-Level Undo/Redo**
+  - Extend current `operation_stack` to track individual file movements
+
+### Performance Essentials
+
+- **SQLite History System**
+  - Replace JSON logs with relational database
+
+- **Preview Caching**
+  - Reuse generated thumbnails/text previews
+
+### UI Improvements
+
+- **Keyboard Navigation**
+  - Add hotkeys for common actions
+
+- **Theme Engine Foundation**
+  - Extend `ttkbootstrap` integration for dark/light modes
+---
+### **--next 6-12 months**
+### Advanced Functionality
+
+- **Lazy-Loading Directories**
+  - Implement incremental loading for large folders
+
+
+
+- **Cloud Storage Integration**
+  - Start with Google Drive API integration
+
+### Architecture Upgrades
+
+- **Core/UI Separation**
+  - Prepare for potential cross-platform development
+
+- **Plugin System Prototype**
+  - Modular architecture for future extensions
+
+### AI Foundations
+
+- **Basic ML Classification**
+  - File type recognition using existing metadata
+
+- **Auto-Tagging System**
+  - Leverage file content analysis
+
+
+# **Additional Components**
+
+## Domo (YouTube URL)
 - [Software Demo Video](https://www.youtube.com/watch?v=example)
 
-### Environments of the Software Development and Running
+
+
+## Environments of the Software Development and Running
 - **Programming Language:** Python
-- **Minimum H/W Requirements:**  
-  - CPU: 2.5 GHz Quad-core processor  
-  - RAM: 8 GB  
-  - Storage: 1 GB free space
-- **Minimum S/W Requirements:**  
-  - Operating System: Windows 10/11, macOS 10.15+, Linux (Ubuntu 20.04+)  
-  - Python Version: 3.8+  
-  - Database: PostgreSQL 13+
+
+- **Minimum H/W Requirements:**
+  - CPU: 1.5 GHz Dual-core processor
+  - RAM: 4 GB
+  - Storage: 500 MB free space
+
+- **Minimum S/W Requirements:**
+  - Operating System: Windows 7+, macOS 10.12+, Linux (Ubuntu 18.04+)
+  - Python Version: 3.7+
+  
 - **Required Packages:**  
   - tkinter  
   - ttk
@@ -86,7 +174,9 @@ xxxxxxxxxxxxxxxxxxx
   - json
   - PIL
 
-### Declaration
+
+
+## Declaration
 - **Open Source Components and Packages:**  
   - tkinter: [PSF License](https://docs.python.org/3/license.html)  
   - ttk: [PSF License](https://docs.python.org/3/license.html)  

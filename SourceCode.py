@@ -14,22 +14,18 @@ class FileManagerApp:
         self.style = Style(theme="minty")
         self.root.title("File Manager")
         self.current_dir = ""
-        self.operation_stack = []  # Stores all reversible operations
+        self.operation_stack = []
         
-        # Initialize history directory
         self.history_dir = "file_organization_history"
         os.makedirs(self.history_dir, exist_ok=True)
         
-        # Create UI components
         self.create_widgets()
         self.setup_bindings()
         
     def create_widgets(self):
-        # Main container
         main_frame = ttk.Frame(self.root)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Toolbar with enhanced buttons
         toolbar = ttk.Frame(main_frame)
         toolbar.pack(fill=tk.X, pady=5)
         
@@ -44,16 +40,13 @@ class FileManagerApp:
         for text, command in button_config.items():
             ttk.Button(toolbar, text=text, command=command).pack(side=tk.LEFT, padx=2)
         
-        # Main interface panels
         self.paned_window = ttk.PanedWindow(main_frame, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
         
-        # File system treeview
         self.tree = ttk.Treeview(self.paned_window, columns=("size", "type"), selectmode="browse")
         self.configure_treeview_columns()
         self.paned_window.add(self.tree)
         
-        # Function panel with notebook
         right_panel = self.create_function_panel()
         self.paned_window.add(right_panel)
         
@@ -69,9 +62,8 @@ class FileManagerApp:
         
     def create_function_panel(self):
         panel = ttk.Frame(self.paned_window)
-        self.notebook = ttk.Notebook(panel)  # 关键修改：保存为实例变量
+        self.notebook = ttk.Notebook(panel) 
         
-        # Configure tabs
         tabs = {
             "Preview": self.create_preview_tab,
             "History": self.create_history_tab
@@ -117,7 +109,6 @@ class FileManagerApp:
     def setup_bindings(self):
         self.tree.bind("<<TreeviewSelect>>", self.show_preview)
     
-    # 核心功能实现
     def open_folder(self):
         path = filedialog.askdirectory()
         if not path:
@@ -156,7 +147,6 @@ class FileManagerApp:
                     dest = os.path.join(dest_dir, filename)
                     shutil.move(src, dest)
                     
-                    # 记录操作
                     self.log_operation("MOVE", src, dest)
                     organized_files.append({
                         "type": "MOVE",
@@ -165,7 +155,6 @@ class FileManagerApp:
                         "timestamp": datetime.datetime.now()
                     })
             
-            # 添加到操作栈
             if organized_files:
                 self.operation_stack.extend(organized_files)
                 messagebox.showinfo("Complete", f"Organized {len(organized_files)} files")
@@ -182,7 +171,6 @@ class FileManagerApp:
         success_count = 0
         error_messages = []
         
-        # 按时间倒序处理
         for op in reversed(move_operations):
             try:
                 shutil.move(op["from"], op["to"])
@@ -191,19 +179,15 @@ class FileManagerApp:
             except Exception as e:
                 error_messages.append(f"{op['from']} -> {op['to']}: {str(e)}")
         
-        # 更新操作栈
         self.operation_stack = [op for op in self.operation_stack if op not in move_operations]
         
-        # 刷新界面
         self.load_directory_tree(self.current_dir)
         
-        # 显示结果
         result = f"Successfully undone {success_count} moves"
         if error_messages:
             result += f"\n\nFailed operations:\n" + "\n".join(error_messages)
         messagebox.showinfo("Undo Complete", result)
         
-    # 附加功能
     def find_duplicates(self):
         path = filedialog.askdirectory()
         if not path:
@@ -271,7 +255,7 @@ class FileManagerApp:
         
     def show_history(self):
         self.load_history()
-        self.notebook.select(1)  # 切换到第二个标签页（索引从0开始）
+        self.notebook.select(1)
         
     def load_history(self):
         self.history_tree.delete(*self.history_tree.get_children())
@@ -284,7 +268,7 @@ class FileManagerApp:
     def load_history_file(self, filename):
         filepath = os.path.join(self.history_dir, filename)
         try:
-            with open(filepath, "r", encoding='utf-8') as f:  # 关键修改：指定编码
+            with open(filepath, "r", encoding='utf-8') as f:
                 for line in f:
                     entry = json.loads(line)
                     timestamp = datetime.datetime.fromisoformat(
