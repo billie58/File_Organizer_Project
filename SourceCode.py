@@ -12,7 +12,7 @@ class FileManagerApp:
     def __init__(self, root):
         self.root = root
         self.style = Style(theme="minty")
-        self.root.title("File Manager")
+        self.root.title("File Organizer")
         self.current_dir = ""
         self.operation_stack = []
         
