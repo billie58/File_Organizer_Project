@@ -94,27 +94,28 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 ### Requirement Gathering
 
-- Gathering, analyzing, and documenting the requirements of students, lecturers, and administrators.
+- Gathering, analyzing, and documenting the requirements of students and lecturers.
 - Forming interviews and surveys to collect information.
 
 ### Design
+- 
 
+
+------
 - System and design elements are created based on the requirements.
 - Includes database schema designs and data flow diagrams.
 - Covers basic structure and modules such as:
   - User authentication and authorization
   - Course and assignment management
 - Plan out the product backlog for the upcoming Sprint (Sprint Planning).
-
+-------
 ### Implementation
 
 - Actual coding and development of the application (Sprint Execution).
-- Using version control systems like Git to collaborate and track changes to the codebase.
 
 ### Test / Validation
-
 - Fix issues and bugs.
-- Mainly test the newly added functionality for this Sprint.
+- Mainly test the newly added functionality for a specific sprint.
 
 
 ## Current Status
@@ -200,7 +201,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 # **Additional Components**
 
 ## Domo (YouTube URL)
-- [File Organizer Demo Video](https://www.youtube.com/watch?v=iN4A1Ta1p-I&t=12s)
+- [Software Demo Video](https://www.youtube.com/watch?v=iN4A1Ta1p-I&t=12s)
 
 
 
@@ -237,7 +238,6 @@ We adopted **Scrum**—an Agile project management and product development frame
   - ttk: [PSF License](https://docs.python.org/3/license.html)  
   - filedialog: [PSF License](https://docs.python.org/3/license.html)  
   - messagebox: [PSF License](https://docs.python.org/3/license.html)  
-  - ttkbootstrap: [MIT License](https://github.com/israel-dryer/ttkbootstrap/blob/main/LICENSE)  
   - os: [PSF License](https://docs.python.org/3/license.html)  
   - shutil: [PSF License](https://docs.python.org/3/license.html)  
   - hashlib: [PSF License](https://docs.python.org/3/license.html)  
