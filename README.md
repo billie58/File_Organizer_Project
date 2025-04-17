@@ -1,7 +1,8 @@
 # File_Organizer
 **Organize Files the Stress-Free Way**
 
-File_Organizer works like a digital assistant for your files. It can combine automatic organization with human-friendly controls. It also can track every action, letting you experiment freely knowing you can always rewind mistakes. Regular updates keep the tool focus on real-world needs rather than unnecessary complexity.
+File_Organizer works like a digital assistant for your files. It can combine automatic organization with human-friendly controls. It also can track every action, letting you experiment freely knowing you can always rewind mistakes.
+
 ### 📂 Smart Auto-Sorting and tools
 
 - Automatically moves files to folders by type (documents, images, etc.).
@@ -12,7 +13,6 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 ### ⏮️ Safety First
 
 - Undo accidental file moves.
-- All operations can be reversed.
 - Never lose files by mistake.
 
 
@@ -28,21 +28,44 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 
 # **Purpose of the Software**
 
-## Software Development Process
-- **Type of Development Process Applied:** Agile
-- **Reason for Choosing Agile:** Agile allows for iterative development and continuous improvement, which is essential for our project given the dynamic nature of the target market and the need for rapid adaptation to user feedback.
-# Possible Usage
+- **Type of Development Process:** 
+  - Agile
 
-Our software is designed for **file management and organization**, targeting **students, photographers, and everyday users**. It aims to simplify the process of organizing digital files, providing efficient auto-sorting, powerful duplicate detection, and instant previews.
+- **Why Agile?** 
+   1. **Flexibility and Adaptability**  
+   Agile allows teams to respond quickly to changes in customer feedback. For our project, an ocean of new requiremnets will occur in our developing process as requirements are always cahnging.
 
+  2. **Incremental Delivery**  
+   Agile promotes delivering work in small. This  allows us to develop new functionalities setp by step and make adjustments regularly.
 
+  3. **Faster Delivery**  
+   By focusing on essential features first and iterating quickly, Agile helps our team deliver products to market faster than waterfall.
+
+  
+  
+- **Possible Usage** 
+  - Our software is **designed for** *file management and organization*, **targeting** *students, photographers, and everyday users*. It aims to simplify the process of organizing digital files, providing efficient auto-sorting, powerful duplicate detection, and instant previews.
 
 
 # **Software Development Plan**
 
 ## Development Process
+![Image](https://github.com/user-attachments/assets/0c7cb39b-4b25-46d9-8708-f91f04700b82)
 
-We adopted Scrum—an Agile project management and product development framework—to break down the project into smaller, manageable tasks and facilitate iterative progress. This approach enabled the team to deliver a high-quality application more efficiently by focusing on a limited set of features at any given time. Moreover, Agile (Scrum) allows us to prioritize the needs of our stakeholders (students, lecturers, and administrators) from the very beginning of the software development life cycle.
+We adopted **Scrum**—an Agile project management and product development framework—to break down the project into smaller, manageable tasks. Scrum helps people and teams deliver value incrementally in a collaborative way. As an agile framework, Scrum provides just enough structure for people and teams to integrate into how they work, while adding the right practices to optimize for their specific needs.
+
+1. Requirement analysis Product Owner gathers and understands the key requirements from students, lecturers, and administrators. Create a list of features required and put them to the product backlog.
+
+2. Sprint Planning Select items from the product backlog (work for 3 - 4 weeks) for the upcoming sprint.
+
+3. Daily standups Daily standups meetings to update each other on progress and identify any issues.
+
+4. Sprint Execution Develop the items from the sprint planning.
+
+5. Sprint Review and retrospective Demonstrate the completed work to students, lecturers, administrators. Gather feedback and discuss with the team for the improvements needed.
+
+6. Repeat Move on the next sprint with improved processes.
+
 
 ### Requirement Analysis
 
