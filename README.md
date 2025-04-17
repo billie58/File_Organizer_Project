@@ -54,69 +54,41 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 
 We adopted **Scrum**—an Agile project management and product development framework—to break down the project into smaller, manageable tasks. Scrum helps people and teams deliver value incrementally in a collaborative way. As an agile framework, Scrum provides just enough structure for people and teams to integrate into how they work, while adding the right practices to optimize for their specific needs.
 
-1. Requirement analysis Product Owner gathers and understands the key requirements from students, lecturers, and administrators. Create a list of features required and put them to the product backlog.
+1. Requirement analysis: Product Owner gathers and understands the key requirements from students and  lecturers. Create a list of features required and put them to the product backlog.
 
-2. Sprint Planning Select items from the product backlog (work for 3 - 4 weeks) for the upcoming sprint.
+2. Sprint Planning: Select items from the product backlog (work for 1-2 weeks) for the upcoming sprint.
 
-3. Daily standups Daily standups meetings to update each other on progress and identify any issues.
+3. Daily standups: Daily standups meetings to update each other on progress and identify any issues.
 
-4. Sprint Execution Develop the items from the sprint planning.
+4. Sprint Execution: Develop the items from the sprint planning.
 
-5. Sprint Review and retrospective Demonstrate the completed work to students, lecturers, administrators. Gather feedback and discuss with the team for the improvements needed.
+5. Sprint Review & Retrospective: Demonstrate the completed work to students, lecturers, administrators. Gather feedback and discuss with the team for the improvements needed.
 
 6. Repeat Move on the next sprint with improved processes.
 
-
-### Requirement Analysis
-
-- **Product Owner** gathers and understands the key requirements from students, lecturers, and administrators.
-- Create a list of features required and add them to the **product backlog**.
-
-### Sprint Planning
-
-- Select items from the **product backlog** (work for 3 - 4 weeks) for the upcoming sprint.
-
-### Daily Standups
-
-- Daily standup meetings to update each other on progress and identify any issues.
-
-### Sprint Execution
-
-- Develop the items selected during sprint planning.
-
-### Sprint Review and Retrospective
-
-- Demonstrate the completed work to students, lecturers, and administrators.
-- Gather feedback and discuss with the team for improvements needed.
-
-### Repeat
-
-- Move on to the next sprint with improved processes.
-
-
 ## Members
 - **Frank**  
-  - *Role:* Project Manager  
+  - *Role:* Project Manager,Scrum Master,Product owner  
   - *Responsibilities:* Write the README file, plan the whole software development process, develop the software and test the software. 
   - *Portion:* 34%
 - **David**  
   - *Role:* Developer  
-  - *Responsibilities:* Help develop the software and test the software.
+  - *Responsibilities:* Help develop and test the software.
   - *Portion:* 33%
 - **Max**  
   - *Role:* Developer  
-  - *Responsibilities:* Help develop the software and test the software.  
+  - *Responsibilities:* Help develop and test the software.  
   - *Portion:* 33%
 
 
 ## Schedule
-- **Sprint 1 (Week 1-2):** Initial setup, requirements gathering, basic framework development.
-- **Sprint 2 (Week 3-4):** Core feature development, initial UI/UX design.
-- **Sprint 3 (Week 5-6):** Integration testing, user feedback collection, feature refinement.
-- **Sprint 4 (Week 7-8):** Final testing, deployment preparation, documentation.
-- **Post-Deployment:** Continuous support, updates, and feature enhancements based on user feedback.
-
-
+- **Sprint 1 (Week 1-2):** Requirements gathering, basic framework development.
+- **Sprint 2 (Week 3-4):** Files organization functionality development, initial UI/UX design.
+- **Sprint 3 (Week 5):** Undo Moves functionality development.
+- **Sprint 4 (Week 6):** Preview functionality development.
+- **Sprint 5 (Week 7-8):** Find duplicates and View history functionality development.
+- **Sprint 6 (Week 9):** Integration testing, user feedback collection, feature refinement.
+- **Sprint 7 (Week 10):** Final testing, documentation.
 
 ## Algorithm
 
@@ -143,18 +115,6 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 - Fix issues and bugs.
 - Mainly test the newly added functionality for this Sprint.
-
-### Deployment
-
-- Deploy the code and update the application to the production environment.
-- Review the improvements needed for the Sprint process and apply them (Sprint Review and Retrospective).
-- Start another round of Sprint.
-
-### Maintenance
-
-- After each deployment, closely monitor bugs and errors.
-- Address user feedback.
-
 
 
 ## Current Status
