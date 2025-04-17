@@ -200,7 +200,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 # **Additional Components**
 
 ## Domo (YouTube URL)
-- [Software Demo Video](https://www.youtube.com/watch?v=iN4A1Ta1p-I&t=12s)
+- [File Organizer Demo Video](https://www.youtube.com/watch?v=iN4A1Ta1p-I&t=12s)
 
 
 
