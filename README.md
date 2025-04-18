@@ -89,6 +89,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 - **Sprint 5 (Week 7-8):** Find duplicates and View history functionality development.
 - **Sprint 6 (Week 9):** Integration testing, user feedback collection, feature refinement.
 - **Sprint 7 (Week 10):** Final testing, documentation.
+![Image](https://github.com/user-attachments/assets/1f5685e3-dbb2-4b79-a45f-fe05707b2194)
 
 ## Algorithm
 
@@ -98,25 +99,24 @@ We adopted **Scrum**—an Agile project management and product development frame
 - Forming interviews and surveys to collect information.
 
 ### Design
-- 
 
-
-------
-- System and design elements are created based on the requirements.
-- Includes database schema designs and data flow diagrams.
-- Covers basic structure and modules such as:
-  - User authentication and authorization
-  - Course and assignment management
-- Plan out the product backlog for the upcoming Sprint (Sprint Planning).
--------
+- Functionalities and design elements are created based on the product backlog(or the requirements).
+- Includes database(view history) design.
+- Covers basic futionalities:
+  - Organize files 
+  - Undo moves
+  - View history
+  
 ### Implementation
 
 - Actual coding and development of the application (Sprint Execution).
 
 ### Test / Validation
 - Fix issues and bugs.
-- Mainly test the newly added functionality for a specific sprint.
+- Mainly test the new functionalities added in each specific sprint.
 
+### Maintenance
+- Bugs and errors will be fixed based on the users' feedback.
 
 ## Current Status
 
