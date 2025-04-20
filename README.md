@@ -234,15 +234,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 ## Declaration
 - **Open Source Components and Packages:**  
-  - tkinter: [PSF License](https://docs.python.org/3/license.html)  
-  - ttk: [PSF License](https://docs.python.org/3/license.html)  
-  - filedialog: [PSF License](https://docs.python.org/3/license.html)  
-  - messagebox: [PSF License](https://docs.python.org/3/license.html)  
-  - os: [PSF License](https://docs.python.org/3/license.html)  
-  - shutil: [PSF License](https://docs.python.org/3/license.html)  
-  - hashlib: [PSF License](https://docs.python.org/3/license.html)  
-  - datetime: [PSF License](https://docs.python.org/3/license.html)  
-  - json: [PSF License](https://docs.python.org/3/license.html)  
+  - tkinter, ttk, filedialog, messagebox, os, shutil, hashlib, datetime, json: [PSF License](https://docs.python.org/3/license.html)  
   - PIL (Pillow): [BSD License](https://github.com/python-pillow/Pillow/blob/main/LICENSE)  
 
 *Note: The Python Standard Library components (e.g., tkinter, os, shutil, etc.) are distributed under the Python Software Foundation License (PSF License).*
