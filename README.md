@@ -22,7 +22,7 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 ![Image](https://github.com/user-attachments/assets/24d32416-d1a0-4904-9258-ec238c6bc271)  
 *This screenshot provides a visual representation of File_Organizer after opening a folder*
 
-*(include files in the test_folder and fuctionalities)*
+*(include files in the test_folder and functionalities)*
 
 
 
@@ -33,7 +33,7 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 
 - **Why Agile?** 
    1. **Flexibility and Adaptability**  
-   Agile allows teams to respond quickly to changes in customer feedback. For our project, an ocean of new requiremnets will occur in our developing process as requirements are always cahnging.
+   Agile allows teams to respond quickly to changes in customer feedback. For our project, an ocean of new requirements  will occur in our developing process as requirements are always cahnging.
 
   2. **Incremental Delivery**  
    Agile promotes delivering work in small. This  allows us to develop new functionalities setp by step and make adjustments regularly.
@@ -68,7 +68,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 ## Members
 - **Frank**  
-  - *Role:* Project Manager,Scrum Master,Product owner  
+  - *Role:* Project Manager, Scrum Master, Product owner  
   - *Responsibilities:* Write the README file, plan the whole software development process, develop the software and test the software. 
   - *Portion:* 34%
 - **David**  
