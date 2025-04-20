@@ -102,7 +102,7 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 - Functionalities and design elements are created based on the product backlog(or the requirements).
 - Includes database(view history) design.
-- Covers basic futionalities:
+- Covers basic functionalities:
   - Organize files 
   - Undo moves
   - View history
