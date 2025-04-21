@@ -117,8 +117,8 @@ We adopted **Scrum**—an Agile project management and product development frame
 ![Image](https://github.com/user-attachments/assets/1f5685e3-dbb2-4b79-a45f-fe05707b2194)
 
 ## Algorithm
-![Image](https://github.com/user-attachments/assets/ade79303-c767-4fab-894a-798cd8178084)
 ### Algorithm Overview for Undo Operation Management
+![Image](https://github.com/user-attachments/assets/ade79303-c767-4fab-894a-798cd8178084)
 
 In our File Organizer application, efficient management of file operation history is crucial to ensure reliable undo capabilities and user trust. To achieve this, we implemented a Last-In-First-Out (LIFO) stack-based algorithm for managing operation history. This section outlines the rationale, implementation, and benefits of this design.
 
