@@ -66,6 +66,31 @@ We adopted **Scrum**—an Agile project management and product development frame
 
 6. Repeat Move on the next sprint with improved processes.
 
+### Requirement Gathering
+
+- Gathering, analyzing, and documenting the requirements of students and lecturers.
+- Forming interviews and surveys to collect information.
+
+### Design
+
+- Functionalities and design elements are created based on the product backlog(or the requirements).
+- Includes database(view history) design.
+- Covers basic functionalities:
+  - Organize files 
+  - Undo moves
+  - View history
+  
+### Implementation
+
+- Actual coding and development of the application (Sprint Execution).
+
+### Test / Validation
+- Fix issues and bugs.
+- Mainly test the new functionalities added in each specific sprint.
+
+### Maintenance
+- Bugs and errors will be fixed based on the users' feedback.
+
 ## Members
 - **Frank**  
   - *Role:* Project Manager, Scrum Master, Product owner  
@@ -92,31 +117,35 @@ We adopted **Scrum**—an Agile project management and product development frame
 ![Image](https://github.com/user-attachments/assets/1f5685e3-dbb2-4b79-a45f-fe05707b2194)
 
 ## Algorithm
+![Image](https://github.com/user-attachments/assets/ade79303-c767-4fab-894a-798cd8178084)
+### Algorithm Overview for Undo Operation Management
 
-### Requirement Gathering
+In our File Organizer application, efficient management of file operation history is crucial to ensure reliable undo capabilities and user trust. To achieve this, we implemented a Last-In-First-Out (LIFO) stack-based algorithm for managing operation history. This section outlines the rationale, implementation, and benefits of this design.
 
-- Gathering, analyzing, and documenting the requirements of students and lecturers.
-- Forming interviews and surveys to collect information.
+### Rationale for Stack-Based Undo Management
 
-### Design
+Given the user interaction patterns where the most recent actions are most likely to be undone, a stack structure provides optimal temporal coherence. Key considerations include:
 
-- Functionalities and design elements are created based on the product backlog(or the requirements).
-- Includes database(view history) design.
-- Covers basic functionalities:
-  - Organize files 
-  - Undo moves
-  - View history
-  
-### Implementation
+- **Hardware/Software Constraints**: Memory efficiency for storing lightweight operation metadata (paths/timestamps)
+- **User Experience**: Instant undo responsiveness (<100ms even with 1,000+ operations)
+- **Atomicity**: Ensuring each file move operation can be cleanly reversed
 
-- Actual coding and development of the application (Sprint Execution).
+### How the Stack Algorithm Works
 
-### Test / Validation
-- Fix issues and bugs.
-- Mainly test the new functionalities added in each specific sprint.
+#### 1. Operation Recording
 
-### Maintenance
-- Bugs and errors will be fixed based on the users' feedback.
+When users perform file organization:
+
+- Each file move operation (e.g., `report.docx → docx_files/`) is recorded as a stack entry
+- Entry format:
+
+python
+{  
+  "type": "MOVE",  
+  "from": "docx_files/report.docx",  # Destination  
+  "to": "original/report.docx",      # Source  
+  "timestamp": "2024-03-15T14:22:35"  
+}
 
 ## Current Status
 
