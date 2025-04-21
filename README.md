@@ -23,7 +23,7 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 *This screenshot provides a visual representation of File_Organizer after opening a folder*
 
 *(include files in the test_folder and functionalities)*
-
+architecture diagram
 
 
 # **Purpose of the Software**
@@ -79,7 +79,9 @@ We adopted **Scrum**—an Agile project management and product development frame
   - Organize files 
   - Undo moves
   - View history
-  
+- architecture diagram
+![Image](https://github.com/user-attachments/assets/0d856357-ec89-4c97-ba40-fc19b7140dbd)
+
 ### Implementation
 
 - Actual coding and development of the application (Sprint Execution).
