@@ -139,13 +139,24 @@ When users perform file organization:
 - Each file move operation (e.g., `report.docx → docx_files/`) is recorded as a stack entry
 - Entry format:
 
-python
-{  
-  "type": "MOVE",  
-  "from": "docx_files/report.docx",  # Destination  
-  "to": "original/report.docx",      # Source  
-  "timestamp": "2024-03-15T14:22:35"  
-}
+> {  
+>   "type": "MOVE",  
+>   "from": "docx_files/report.docx",  # Destination  
+>   "to": "original/report.docx",      # Source  
+>   "timestamp": "2024-03-15T14:22:35"  
+> }
+- Operations are pushed to the stack in execution order.
+
+#### 2. Undo Execution
+
+When users trigger "Undo All Moves":
+
+- Reverse-iterate the stack (LIFO order)
+  - For each entry:
+    - Execute inverse operation using `shutil.move(op["from"], op["to"])`
+    - Remove completed entries from the stack
+    - Update directory tree visualization
+
 
 ## Current Status
 
