@@ -27,7 +27,7 @@ File_Organizer works like a digital assistant for your files. It can combine aut
 
 
 # **Purpose of the Software**
-
+> This software is designed to automate and enhance file management workflows by providing intelligent tools for organizing, auditing, and recovering files. It addresses common pain points in manual file handling while ensuring data integrity and user control.
 - **Type of Development Process:** 
   - Agile
 
